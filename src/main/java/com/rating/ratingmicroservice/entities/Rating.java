@@ -18,14 +18,16 @@ import java.util.Date;
 public class Rating {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int Id;
+    private int id;
     @Column(name = "score",nullable = false)
-    private int Score;
+    private int score;
     @Column(name = "creation_date",nullable = false)
-    private Date CreationDate;
+    private Date creationDate;
     @Column(name = "tourist_id",nullable = false)
-    private int TouristId;
+    private int touristId;
+
+
     @Column(name = "trip_id",nullable = false)
-    private int TripId;
+    private int tripId;
 
 }

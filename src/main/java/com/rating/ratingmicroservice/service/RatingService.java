@@ -1,13 +1,18 @@
 package com.rating.ratingmicroservice.service;
 
 import com.rating.ratingmicroservice.entities.Rating;
+import com.rating.ratingmicroservice.http.RatingResponse;
 
 import java.util.List;
 
 public interface RatingService {
-    public abstract Rating createRating(Rating _rating);
-    public abstract List<Rating> getAllRating();
-    public abstract void updateRating(Rating _rating);
-    public abstract void deleteRating(int _id);
-    public abstract Rating getRatingById(int _id);
+    Rating createRating(Rating _rating);
+    List<RatingResponse> getAllRatings();
+    void updateRating(Rating _rating);
+
+    List<Rating> getRatingsByTripId(int tripId);
+    List<RatingResponse> getRatingsByTripIdWithTrip(int tripId);
+
+    void deleteRating(int _id);
+    RatingResponse getRatingById(int _id);
 }
