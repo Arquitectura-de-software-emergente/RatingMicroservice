@@ -16,7 +16,7 @@ public class TripClient {
 
     @Autowired
     public TripClient(WebClient.Builder webClientBuilder) {
-        this.webClient = webClientBuilder.baseUrl("http://localhost:8082/api/v1").build();
+        this.webClient = webClientBuilder.baseUrl("http://localhost:8080/api/v1").build();
     }
 
     public List<TripDto> getAllTrips() {

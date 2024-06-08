@@ -14,39 +14,39 @@ import java.util.List;
 
 @CrossOrigin("*")
 @RestController
-@RequestMapping("/api/v1")
+@RequestMapping("/api/v1/rating")
 public class RatingController {
     private static final Logger logger = LoggerFactory.getLogger(RatingController.class);
 
     @Autowired
     private RatingService _ratingService;
 
-    @PostMapping("/rating")
+    @PostMapping
     public ResponseEntity<Rating> createRating(@RequestBody Rating _rating) {
         Rating createdRating = _ratingService.createRating(_rating);
         return new ResponseEntity<>(createdRating, HttpStatus.CREATED);
     }
 
-    @GetMapping("/rating")
+    @GetMapping
     public ResponseEntity<List<RatingResponse>> getAllRating() {
         List<RatingResponse> ratings = _ratingService.getAllRatings();
         return new ResponseEntity<>(ratings, HttpStatus.OK);
     }
 
-    @PutMapping("/rating/{id}")
+    @PutMapping("/{id}")
     public ResponseEntity<Void> updateRating(@PathVariable("id") int id, @RequestBody Rating _rating) {
         _rating.setId(id);
         _ratingService.updateRating(_rating);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
-    @DeleteMapping("/rating/{id}")
+    @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteRating(@PathVariable("id") int id) {
         _ratingService.deleteRating(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
-    @GetMapping("/rating/{id}")
+    @GetMapping("/{id}")
     public ResponseEntity<RatingResponse> getRatingById(@PathVariable("id") int id) {
         try {
             RatingResponse rating = _ratingService.getRatingById(id);
@@ -56,7 +56,7 @@ public class RatingController {
         }
     }
 
-    @GetMapping("/ratings/by-trip/{tripId}")
+    @GetMapping("/by-trip/{tripId}")
     public ResponseEntity<List<?>> getRatingsByTripId(
             @PathVariable("tripId") int tripId,
             @RequestParam(name = "includeTrips", required = false, defaultValue = "false") boolean includeTrips) {
