@@ -11,6 +11,7 @@ public interface RatingService {
     void updateRating(Rating _rating);
 
     List<Rating> getRatingsByTripId(int tripId);
+    List<Rating> getRatingsByTouristId(int touristId);
     List<RatingResponse> getRatingsByTripIdWithTrip(int tripId);
 
     void deleteRating(int _id);

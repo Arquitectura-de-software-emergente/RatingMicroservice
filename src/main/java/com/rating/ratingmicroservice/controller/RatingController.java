@@ -72,4 +72,9 @@ public class RatingController {
             return new ResponseEntity<>(ratings, HttpStatus.OK);
         }
     }
+    @GetMapping("/ratings/by-tourist/{touristId}")
+    public ResponseEntity<List<?>> getRatingsByTouristId(@PathVariable("touristId") int touristId) {
+        List<Rating> ratings = _ratingService.getRatingsByTouristId(touristId);
+        return new ResponseEntity<>(ratings, HttpStatus.OK);
+    }
 }

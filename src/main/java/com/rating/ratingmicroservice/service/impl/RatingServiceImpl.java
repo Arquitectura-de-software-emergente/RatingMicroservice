@@ -93,4 +93,9 @@ public class RatingServiceImpl implements RatingService {
                 .trip(trip)  // Incluir el objeto TripDto en la respuesta
                 .build();
     }
+
+    @Override
+    public List<Rating> getRatingsByTouristId(int touristId) {
+        return _ratingRepository.findByTouristId(touristId);
+    }
 }
