@@ -1,8 +1,8 @@
-package com.rating.ratingmicroservice.controller;
+package com.rating.ratingmicroservice.domain.rest;
 
-import com.rating.ratingmicroservice.entities.Rating;
-import com.rating.ratingmicroservice.http.RatingResponse;
-import com.rating.ratingmicroservice.service.RatingService;
+import com.rating.ratingmicroservice.domain.model.Rating;
+import com.rating.ratingmicroservice.interfaces.dto.RatingResponse;
+import com.rating.ratingmicroservice.domain.service.RatingService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

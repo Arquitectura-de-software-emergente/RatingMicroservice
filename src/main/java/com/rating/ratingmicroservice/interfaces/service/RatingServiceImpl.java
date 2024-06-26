@@ -1,17 +1,16 @@
-package com.rating.ratingmicroservice.service.impl;
+package com.rating.ratingmicroservice.interfaces.service;
 
-import com.rating.ratingmicroservice.client.TripClient;
-import com.rating.ratingmicroservice.dto.TripDto;
-import com.rating.ratingmicroservice.entities.Rating;
-import com.rating.ratingmicroservice.http.RatingResponse;
-import com.rating.ratingmicroservice.repository.RatingRepository;
-import com.rating.ratingmicroservice.service.RatingService;
+import com.rating.ratingmicroservice.api.client.TripClient;
+import com.rating.ratingmicroservice.interfaces.dto.TripDto;
+import com.rating.ratingmicroservice.domain.model.Rating;
+import com.rating.ratingmicroservice.interfaces.dto.RatingResponse;
+import com.rating.ratingmicroservice.Infrastructure.persistence.RatingRepository;
+import com.rating.ratingmicroservice.domain.service.RatingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 public class RatingServiceImpl implements RatingService {

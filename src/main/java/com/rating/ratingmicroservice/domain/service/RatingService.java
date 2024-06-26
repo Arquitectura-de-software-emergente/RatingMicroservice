@@ -1,7 +1,7 @@
-package com.rating.ratingmicroservice.service;
+package com.rating.ratingmicroservice.domain.service;
 
-import com.rating.ratingmicroservice.entities.Rating;
-import com.rating.ratingmicroservice.http.RatingResponse;
+import com.rating.ratingmicroservice.domain.model.Rating;
+import com.rating.ratingmicroservice.interfaces.dto.RatingResponse;
 
 import java.util.List;
 

@@ -1,6 +1,6 @@
-package com.rating.ratingmicroservice.repository;
+package com.rating.ratingmicroservice.Infrastructure.persistence;
 
-import com.rating.ratingmicroservice.entities.Rating;
+import com.rating.ratingmicroservice.domain.model.Rating;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

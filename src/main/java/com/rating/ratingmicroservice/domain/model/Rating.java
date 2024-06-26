@@ -1,4 +1,4 @@
-package com.rating.ratingmicroservice.entities;
+package com.rating.ratingmicroservice.domain.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
